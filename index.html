@@ -23,8 +23,9 @@
             animation: {
               'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'float': 'float 3s ease-in-out infinite',
-              'scroll': 'scroll 30s linear infinite', /* Slower for better readability */
+              'scroll': 'scroll 30s linear infinite',
               'wiggle': 'wiggle 4s ease-in-out infinite',
+              'modal-pop': 'modal-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
             },
             keyframes: {
               'pulse-glow': {
@@ -37,12 +38,16 @@
               },
               'scroll': {
                 '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-50%)' }, /* Moves exactly half way (one set width) then resets */
+                '100%': { transform: 'translateX(-50%)' },
               },
               'wiggle': {
                 '0%, 100%': { transform: 'rotate(-3deg)' },
                 '50%': { transform: 'rotate(3deg)' },
                 '5%, 10%, 15%, 20%, 25%': { transform: 'rotate(0deg)' } 
+              },
+              'modal-pop': {
+                '0%': { opacity: 0, transform: 'scale(0.95) translateY(10px)' },
+                '100%': { opacity: 1, transform: 'scale(1) translateY(0)' }
               }
             }
           },
