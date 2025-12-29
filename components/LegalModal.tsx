@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, ShieldCheck, Lock, CheckCircle2, Clock } from 'lucide-react';
+import { X, ShieldCheck, CheckCircle2, Clock } from 'lucide-react';
 
 interface LegalModalProps {
   isOpen: boolean;
@@ -42,20 +42,20 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black/90 backdrop-blur-sm transition-opacity duration-300"
+        className="absolute inset-0 bg-black/95 backdrop-blur-md transition-opacity duration-300"
         onClick={canClose ? onClose : undefined} // Only allow click outside to close if timer is done
       />
 
       {/* Modal Content */}
-      <div className="relative w-full max-w-lg bg-[#0f0f0f] border border-white/10 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] flex flex-col max-h-[85vh] animate-modal-pop overflow-hidden">
+      <div className="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-[0_0_50px_rgba(138,43,226,0.15)] flex flex-col max-h-[85vh] animate-modal-pop overflow-hidden">
         
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-white/5 bg-[#111]">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-neonPurple/10 rounded-lg">
+            <div className="p-2 bg-neonPurple/10 rounded-lg border border-neonPurple/20">
                <ShieldCheck className="w-5 h-5 text-neonPurple" />
             </div>
             <h3 className="text-xl font-bold text-white tracking-wide">{title}</h3>
@@ -64,9 +64,9 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
           {/* Close button - Only visible after timer */}
           <button 
             onClick={onClose} 
-            className={`p-2 rounded-lg hover:bg-white/10 transition-colors ${canClose ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+            className={`p-2 rounded-lg hover:bg-white/10 transition-all duration-300 ${canClose ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}
           >
-            <X className="w-5 h-5 text-gray-400" />
+            <X className="w-5 h-5 text-gray-400 hover:text-white" />
           </button>
         </div>
 
@@ -78,15 +78,15 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
         </div>
 
         {/* Footer with Timer Button */}
-        <div className="p-6 border-t border-white/5 bg-[#111]">
+        <div className="p-6 border-t border-white/5 bg-[#0f0f0f]">
           <button
             onClick={canClose ? onClose : undefined}
             disabled={!canClose}
             className={`
               w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-500 flex items-center justify-center gap-2
               ${canClose 
-                ? 'bg-neonPurple text-white hover:bg-neonPurple/90 shadow-[0_0_20px_rgba(138,43,226,0.4)] scale-100 cursor-pointer' 
-                : 'bg-white/5 text-gray-500 cursor-not-allowed border border-white/5 grayscale'
+                ? 'bg-neonPurple text-white hover:bg-neonPurple/90 shadow-[0_0_30px_rgba(138,43,226,0.5)] scale-100 cursor-pointer transform' 
+                : 'bg-white/5 text-gray-500 cursor-not-allowed border border-white/5 grayscale opacity-50'
               }
             `}
           >
@@ -97,8 +97,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
               </>
             ) : (
               <>
-                <Clock className="w-4 h-4 animate-pulse text-neonPurple" />
-                <span>Aguarde a Leitura ({timeLeft}s)</span>
+                <Clock className="w-4 h-4 animate-spin text-neonPurple" style={{ animationDuration: '3s' }} />
+                <span>Leia o documento ({timeLeft}s)</span>
               </>
             )}
           </button>

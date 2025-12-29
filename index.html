@@ -25,12 +25,12 @@
               'float': 'float 3s ease-in-out infinite',
               'scroll': 'scroll 30s linear infinite',
               'wiggle': 'wiggle 4s ease-in-out infinite',
-              'modal-pop': 'modal-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'modal-pop': 'modal-pop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
             },
             keyframes: {
               'pulse-glow': {
-                '0%, 100%': { opacity: 1, boxShadow: '0 0 20px rgba(138, 43, 226, 0.5)' },
-                '50%': { opacity: .8, boxShadow: '0 0 10px rgba(138, 43, 226, 0.2)' },
+                '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(138, 43, 226, 0.5)' },
+                '50%': { opacity: '0.8', boxShadow: '0 0 10px rgba(138, 43, 226, 0.2)' },
               },
               'float': {
                 '0%, 100%': { transform: 'translateY(0)' },
@@ -46,8 +46,8 @@
                 '5%, 10%, 15%, 20%, 25%': { transform: 'rotate(0deg)' } 
               },
               'modal-pop': {
-                '0%': { opacity: 0, transform: 'scale(0.95) translateY(10px)' },
-                '100%': { opacity: 1, transform: 'scale(1) translateY(0)' }
+                '0%': { opacity: '0', transform: 'scale(0.95) translateY(10px)' },
+                '100%': { opacity: '1', transform: 'scale(1) translateY(0)' }
               }
             }
           },
@@ -74,6 +74,15 @@
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #8A2BE2; 
+      }
+      
+      /* Utility for hiding scrollbar in modal text but allowing scroll */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #444;
+        border-radius: 2px;
       }
     </style>
   <script type="importmap">
