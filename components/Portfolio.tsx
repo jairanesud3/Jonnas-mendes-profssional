@@ -23,6 +23,9 @@ export const Portfolio: React.FC = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-1.5 text-xs text-yellow-400 font-medium">

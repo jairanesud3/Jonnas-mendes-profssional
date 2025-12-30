@@ -26,6 +26,9 @@ export const Hero: React.FC = () => {
                         src={PROFILE_DATA.avatarUrl} 
                         alt={PROFILE_DATA.name}
                         className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                        loading="eager"
+                        width={224}
+                        height={224}
                       />
                   </div>
                   
