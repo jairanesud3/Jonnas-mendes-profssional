@@ -68,6 +68,7 @@ export const InteractiveBackground: React.FC = () => {
 
     let globalOffsetX = 0;
     let globalOffsetY = 0;
+    let animId: number;
 
     const animate = () => {
       ctx.fillStyle = '#050505';
@@ -110,10 +111,10 @@ export const InteractiveBackground: React.FC = () => {
         ctx.fillRect(renderX - size / 2, renderY - size / 2, size, size);
       });
 
-      requestAnimationFrame(animate);
+      animId = requestAnimationFrame(animate);
     };
 
-    const animId = requestAnimationFrame(animate);
+    animate();
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -126,7 +127,7 @@ export const InteractiveBackground: React.FC = () => {
     <canvas 
       ref={canvasRef} 
       className="fixed top-0 left-0 w-full h-full pointer-events-none"
-      style={{ zIndex: 0 }} 
+      style={{ zIndex: -1 }} 
     />
   );
 };
