@@ -9,8 +9,9 @@ interface LegalModalProps {
 }
 
 export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, content }) => {
-  const [timeLeft, setTimeLeft] = useState(10);
-  const [canClose, setCanClose] = useState(false);
+  // Explicitly typed state to ensure strictness
+  const [timeLeft, setTimeLeft] = useState<number>(10);
+  const [canClose, setCanClose] = useState<boolean>(false);
 
   useEffect(() => {
     if (isOpen) {
