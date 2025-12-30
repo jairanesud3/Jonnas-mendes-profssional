@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hero } from './components/Hero';
+import { Header } from './components/Header';
 import { TrustBar } from './components/TrustBar';
 import { About } from './components/About';
 import { PainPoints } from './components/PainPoints';
@@ -16,6 +17,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen text-white font-sans selection:bg-neonPurple selection:text-white relative overflow-hidden">
       <InteractiveBackground />
+      <Header />
       <main className="relative z-10">
         <Hero />
         <TrustBar />

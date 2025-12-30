@@ -52,12 +52,11 @@ export const TrustBar: React.FC = () => {
                  <img 
                   src={logo.url} 
                   alt={logo.name}
-                  className="h-7 md:h-9 w-auto object-contain transition-all duration-500 filter grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 group-hover/logo:scale-110"
-                  style={{ 
-                    // Vercel needs inversion when in monochrome mode to be visible on black, 
-                    // but we handle this via CSS filter mostly.
-                    filter: logo.name === 'Vercel' ? 'invert(1) grayscale(100%)' : 'grayscale(100%)'
-                  }}
+                  className={`
+                    h-7 md:h-9 w-auto object-contain transition-all duration-500 
+                    opacity-40 group-hover/logo:opacity-100 group-hover/logo:scale-110
+                    ${logo.name === 'Vercel' ? 'invert' : 'grayscale group-hover/logo:grayscale-0'}
+                  `}
                 />
               </div>
             ))}
@@ -70,10 +69,11 @@ export const TrustBar: React.FC = () => {
                  <img 
                   src={logo.url} 
                   alt={logo.name}
-                  className="h-7 md:h-9 w-auto object-contain transition-all duration-500 filter grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 group-hover/logo:scale-110"
-                  style={{ 
-                    filter: logo.name === 'Vercel' ? 'invert(1) grayscale(100%)' : 'grayscale(100%)'
-                  }}
+                  className={`
+                    h-7 md:h-9 w-auto object-contain transition-all duration-500 
+                    opacity-40 group-hover/logo:opacity-100 group-hover/logo:scale-110
+                    ${logo.name === 'Vercel' ? 'invert' : 'grayscale group-hover/logo:grayscale-0'}
+                  `}
                 />
               </div>
             ))}
