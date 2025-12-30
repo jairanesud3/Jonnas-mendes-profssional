@@ -64,7 +64,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
           {/* Close button */}
           <button 
             onClick={onClose} 
-            className={`p-2 rounded-lg hover:bg-white/10 transition-all duration-300 ${canClose ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}
+            className={`p-2 rounded-lg hover:bg-white/10 transition-all duration-500 ease-out ${canClose ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}
             aria-label="Fechar"
           >
             <X className="w-5 h-5 text-gray-400 hover:text-white" />
@@ -86,7 +86,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
             className={`
               w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-500 flex items-center justify-center gap-2
               ${canClose 
-                ? 'bg-neonPurple text-white hover:bg-neonPurple/90 shadow-[0_0_30px_rgba(138,43,226,0.6)] scale-100 cursor-pointer' 
+                ? 'bg-neonPurple text-white hover:bg-neonPurple/90 shadow-[0_0_30px_rgba(138,43,226,0.6)] scale-100 cursor-pointer transform hover:scale-[1.02]' 
                 : 'bg-white/5 text-gray-500 cursor-not-allowed border border-white/5 grayscale opacity-60'
               }
             `}
@@ -98,7 +98,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
               </div>
             ) : (
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-neonPurple animate-spin" style={{ animationDuration: '3s' }} />
+                <Clock className="w-4 h-4 text-neonPurple animate-[spin_3s_linear_infinite]" />
                 <span>Leia o documento ({timeLeft}s)</span>
               </div>
             )}
