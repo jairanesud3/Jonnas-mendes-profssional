@@ -47,6 +47,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
       className="fixed inset-0 z-[99999] flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
+      aria-labelledby="legal-modal-title"
     >
       {/* Backdrop */}
       <div 
@@ -63,14 +64,16 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, 
             <div className="p-2 bg-neonPurple/10 rounded-lg border border-neonPurple/20">
                <ShieldCheck className="w-5 h-5 text-neonPurple" />
             </div>
-            <h3 className="text-xl font-bold text-white tracking-wide">{title}</h3>
+            <h3 id="legal-modal-title" className="text-xl font-bold text-white tracking-wide">
+              {title}
+            </h3>
           </div>
           
           {/* Close button */}
           <button 
             onClick={onClose} 
             className={`p-2 rounded-lg hover:bg-white/10 transition-all duration-500 ease-out ${canClose ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}
-            aria-label="Fechar"
+            aria-label="Fechar modal"
           >
             <X className="w-5 h-5 text-gray-400 hover:text-white" />
           </button>
