@@ -28,6 +28,7 @@
               'scroll': 'scroll 30s linear infinite',
               'wiggle': 'wiggle 4s ease-in-out infinite',
               'modal-pop': 'modal-pop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'shimmer': 'shimmer 2s infinite',
             },
             keyframes: {
               'pulse-glow': {
@@ -50,6 +51,9 @@
               'modal-pop': {
                 '0%': { opacity: '0', transform: 'scale(0.95) translateY(10px)' },
                 '100%': { opacity: '1', transform: 'scale(1) translateY(0)' }
+              },
+              'shimmer': {
+                '100%': { transform: 'translateX(100%)' }
               }
             }
           },
@@ -62,8 +66,15 @@
         color: #ffffff;
         font-family: 'Outfit', sans-serif;
         overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       
+      ::selection {
+        background: #8A2BE2; /* Neon Purple */
+        color: #ffffff;
+      }
+
       /* Global Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;

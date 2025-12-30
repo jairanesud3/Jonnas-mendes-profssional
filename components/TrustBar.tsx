@@ -30,33 +30,33 @@ const LOGOS = [
 
 export const TrustBar: React.FC = () => {
   return (
-    <div className="w-full bg-black border-y border-white/5 py-10 overflow-hidden relative z-20">
+    <div className="w-full bg-black border-y border-white/5 py-10 overflow-hidden relative z-20 group/bar">
       
       <div className="max-w-7xl mx-auto px-4 mb-8 text-center">
-        <p className="text-xs font-bold tracking-[0.2em] text-gray-500 uppercase">
+        <p className="text-xs font-bold tracking-[0.2em] text-gray-600 uppercase transition-colors duration-300 group-hover/bar:text-gray-400">
           Tecnologias & Integrações
         </p>
       </div>
 
       <div className="relative w-full overflow-hidden">
-        <div className="absolute inset-y-0 left-0 w-12 md:w-24 bg-gradient-to-r from-deepBlack to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-12 md:w-24 bg-gradient-to-l from-deepBlack to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-deepBlack to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-deepBlack to-transparent z-10 pointer-events-none"></div>
         
-        {/* Marquee Container - Width must be fit-content to allow correct 50% translation calculation */}
-        <div className="flex w-max animate-scroll">
+        {/* Marquee Container */}
+        <div className="flex w-max animate-scroll hover:[animation-play-state:paused]">
           
           {/* Set 1 */}
-          <div className="flex items-center gap-12 md:gap-20 px-6 md:px-10">
+          <div className="flex items-center gap-16 md:gap-24 px-8 md:px-12">
             {LOGOS.map((logo, index) => (
-              <div key={`s1-${index}`} className="flex items-center justify-center w-24 md:w-32">
+              <div key={`s1-${index}`} className="group/logo flex items-center justify-center w-24 md:w-32 cursor-default">
                  <img 
                   src={logo.url} 
                   alt={logo.name}
-                  className="h-8 md:h-10 w-auto object-contain transition-all duration-300"
+                  className="h-7 md:h-9 w-auto object-contain transition-all duration-500 filter grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 group-hover/logo:scale-110"
                   style={{ 
-                    // Only invert Vercel because it's black. Others are colorful.
-                    filter: logo.name === 'Vercel' ? 'invert(1)' : 'none',
-                    opacity: 0.9
+                    // Vercel needs inversion when in monochrome mode to be visible on black, 
+                    // but we handle this via CSS filter mostly.
+                    filter: logo.name === 'Vercel' ? 'invert(1) grayscale(100%)' : 'grayscale(100%)'
                   }}
                 />
               </div>
@@ -64,16 +64,15 @@ export const TrustBar: React.FC = () => {
           </div>
 
           {/* Set 2 (Duplicate for Seamless Loop) */}
-          <div className="flex items-center gap-12 md:gap-20 px-6 md:px-10">
+          <div className="flex items-center gap-16 md:gap-24 px-8 md:px-12">
             {LOGOS.map((logo, index) => (
-              <div key={`s2-${index}`} className="flex items-center justify-center w-24 md:w-32">
+              <div key={`s2-${index}`} className="group/logo flex items-center justify-center w-24 md:w-32 cursor-default">
                  <img 
                   src={logo.url} 
                   alt={logo.name}
-                  className="h-8 md:h-10 w-auto object-contain transition-all duration-300"
+                  className="h-7 md:h-9 w-auto object-contain transition-all duration-500 filter grayscale opacity-40 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 group-hover/logo:scale-110"
                   style={{ 
-                    filter: logo.name === 'Vercel' ? 'invert(1)' : 'none',
-                    opacity: 0.9
+                    filter: logo.name === 'Vercel' ? 'invert(1) grayscale(100%)' : 'grayscale(100%)'
                   }}
                 />
               </div>
