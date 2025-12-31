@@ -1,0 +1,10 @@
+PASTA DE IMAGENS PÚBLICAS
+
+1. Coloque a sua foto de perfil aqui dentro desta pasta.
+2. Renomeie a foto para "profile.png".
+3. A foto aparecerá automaticamente no site.
+
+Se sua foto tiver outro formato (ex: .jpg, .jpeg), vá até o arquivo "constants.tsx" na raiz do projeto e altere a linha:
+avatarUrl: "/profile.png" 
+para
+avatarUrl: "/sua-foto.jpg"
