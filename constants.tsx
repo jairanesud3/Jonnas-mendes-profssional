@@ -15,8 +15,8 @@ export const PROFILE_DATA = {
   name: "Jonnas Mendes",
   title: "Especialista em Posicionamento Digital",
   slogan: "Pare de perder clientes por parecer amador. Eu construo a imagem profissional que te permite cobrar mais caro e fechar negócios com facilidade.",
-  // COLOQUE SUA FOTO NA PASTA 'public' E RENOMEIE PARA 'profile.png'
-  avatarUrl: "/profile.png", 
+  // Recuperei sua foto pelo seu usuário do GitHub.
+  avatarUrl: "https://github.com/jonnasmendes.png", 
   whatsappLink: "https://wa.me/5500000000000?text=Olá,%20Jonnas!%20Vim%20pelo%20seu%20portfólio%20e%20quero%20um%20site%20profissional.", // User to update
   instagramLink: "https://instagram.com/jonnasmendes.web",
 };
@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "Dra. Jairane Sousa",
     category: "Criminalista",
-    // COLOQUE A FOTO DO SITE NA PASTA 'public' E RENOMEIE PARA 'project-jairane.png'
+    // Certifique-se de que a imagem 'project-jairane.png' está na pasta public
     image: "/project-jairane.png", 
     link: "https://jairane-teste-site.vercel.app/" 
   },
