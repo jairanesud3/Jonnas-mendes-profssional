@@ -1,15 +1,20 @@
 import React from 'react';
 import { PROJECTS } from '../constants';
-import { ExternalLink, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, Layers } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 export const Portfolio: React.FC = () => {
   return (
     <section className="py-12 px-4 max-w-2xl mx-auto">
       <ScrollReveal>
-        <h2 className="text-3xl font-bold text-center mb-10 text-white">
-          Projetos <span className="text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonCyan">Recentes</span>
-        </h2>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-white mb-3">
+            Sites de <span className="text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonCyan">Demonstração</span>
+          </h2>
+          <p className="text-gray-400 text-sm max-w-md mx-auto">
+            Modelos visuais para você conhecer a qualidade do design e estrutura.
+          </p>
+        </div>
       </ScrollReveal>
 
       <div className="grid grid-cols-1 gap-8">
@@ -28,9 +33,9 @@ export const Portfolio: React.FC = () => {
                   height={600}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-1.5 text-xs text-yellow-400 font-medium">
-                  <CheckCircle2 className="w-3 h-3" />
-                  Entregue
+                <div className="absolute top-4 right-4 z-20 bg-neonPurple/20 backdrop-blur-md px-3 py-1 rounded-full border border-neonPurple/30 flex items-center gap-1.5 text-xs text-neonCyan font-medium">
+                  <Layers className="w-3 h-3" />
+                  Modelo Visual
                 </div>
               </div>
 
@@ -50,7 +55,7 @@ export const Portfolio: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-white transition-colors group/link"
                   >
-                    Ver Projeto 
+                    Ver Demonstração
                     <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
                   </a>
                 </div>
