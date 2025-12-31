@@ -34,9 +34,9 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "Dra. Jairane Sousa",
     category: "Criminalista",
-    // Placeholder image that looks professional/dark
-    image: "https://picsum.photos/id/1033/800/600", 
-    link: "#" // User to update
+    // COLOQUE A FOTO DO SITE NA PASTA 'public' E RENOMEIE PARA 'project-jairane.png'
+    image: "/project-jairane.png", 
+    link: "https://jairane-teste-site.vercel.app/" 
   },
   {
     id: 2,

@@ -1,0 +1,7 @@
+COMO ADICIONAR A FOTO DO PROJETO (DRA. JAIRANE)
+
+1. Tire um "print" ou salve uma foto bonita do site da Dra. Jairane.
+2. Coloque o arquivo de imagem dentro desta pasta "public".
+3. Renomeie o arquivo EXATAMENTE para: project-jairane.png
+
+Se o arquivo for jpg, você precisará ir no arquivo "constants.tsx" e mudar para .jpg.
