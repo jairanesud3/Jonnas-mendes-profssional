@@ -15,8 +15,8 @@ export const PROFILE_DATA = {
   name: "Jonnas Mendes",
   title: "Especialista em Posicionamento Digital",
   slogan: "Pare de perder clientes por parecer amador. Eu construo a imagem profissional que te permite cobrar mais caro e fechar negócios com facilidade.",
-  // Recuperei sua foto pelo seu usuário do GitHub.
-  avatarUrl: "https://github.com/jonnasmendes.png", 
+  // Retornado para arquivo local conforme solicitado. Coloque sua foto como 'profile.png' na pasta public.
+  avatarUrl: "/profile.png", 
   whatsappLink: "https://wa.me/5500000000000?text=Olá,%20Jonnas!%20Vim%20pelo%20seu%20portfólio%20e%20quero%20um%20site%20profissional.", // User to update
   instagramLink: "https://instagram.com/jonnasmendes.web",
 };
