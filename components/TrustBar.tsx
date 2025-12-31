@@ -53,9 +53,9 @@ export const TrustBar: React.FC = () => {
                   src={logo.url} 
                   alt={logo.name}
                   className={`
-                    h-7 md:h-9 w-auto object-contain transition-all duration-500 
-                    opacity-40 group-hover/logo:opacity-100 group-hover/logo:scale-110
-                    ${logo.name === 'Vercel' ? 'invert' : 'grayscale group-hover/logo:grayscale-0'}
+                    h-8 md:h-10 w-auto object-contain transition-all duration-500 
+                    opacity-80 hover:opacity-100 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]
+                    ${logo.name === 'Vercel' ? 'invert' : ''}
                   `}
                 />
               </div>
@@ -70,9 +70,9 @@ export const TrustBar: React.FC = () => {
                   src={logo.url} 
                   alt={logo.name}
                   className={`
-                    h-7 md:h-9 w-auto object-contain transition-all duration-500 
-                    opacity-40 group-hover/logo:opacity-100 group-hover/logo:scale-110
-                    ${logo.name === 'Vercel' ? 'invert' : 'grayscale group-hover/logo:grayscale-0'}
+                    h-8 md:h-10 w-auto object-contain transition-all duration-500 
+                    opacity-80 hover:opacity-100 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]
+                    ${logo.name === 'Vercel' ? 'invert' : ''}
                   `}
                 />
               </div>
