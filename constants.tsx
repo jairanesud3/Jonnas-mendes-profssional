@@ -34,16 +34,17 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "Dra. Jairane Sousa",
     category: "Criminalista",
-    // Certifique-se de que a imagem 'project-jairane.png' está na pasta public
+    // Salve o print deste site na pasta public com o nome: project-jairane.png
     image: "/project-jairane.png", 
     link: "https://jairane-teste-site.vercel.app/" 
   },
   {
     id: 2,
-    title: "Dr. Kaio Pedroso",
+    title: "Dr. Dudu Oliveira",
     category: "Advocacia",
-    image: "https://picsum.photos/id/1056/800/600",
-    link: "#" // User to update
+    // Salve o print deste site na pasta public com o nome: project-dudu.png
+    image: "/project-dudu.png",
+    link: "https://dudu-advogados.vercel.app/" 
   }
 ];
 
